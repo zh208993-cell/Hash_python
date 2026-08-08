@@ -3,7 +3,7 @@ name: Run Python Script Daily
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: '1 1 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch: # Allows manual testing
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Run Python script
-        run: python your_script.py
+        run: python crypto_notifier.py
 
       - name: Run Python script
         run: python your_script.py
